@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+// 1. Sobrescribir variables de Bootstrap
+@import 'styles/bootstrap-override';
+
+// 2. Importar Bootstrap después de las variables sobreescritas
+@import 'bootstrap/scss/bootstrap';
+
+// 3. Tus variables personalizadas y estilos propios
+@import 'styles/variables';
+
+body {
+  background-color: var(--color-bg);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  margin: 0;
+  padding: 0;
+  color: var(--color-text);
+}
