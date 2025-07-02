@@ -1,5 +1,4 @@
-@import 'variables';
-@import 'bootstrap-override';
+@use '../../../styles/bootstrap-override' as *;
 
 :host {
   display: block;

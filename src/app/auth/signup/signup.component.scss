@@ -1,0 +1,32 @@
+@use 'bootstrap-override' as *;
+
+:host {
+  display: block;
+  background-color: $body-bg;
+  color: $body-color;
+  font-family: var(--font-family-base);
+}
+
+h1, h5 {
+  font-family: var(--font-family-base);
+}
+
+.btn-success {
+  background-color: $success;
+  border-color: $success;
+}
+
+.btn-outline-success {
+  color: $success;
+  border-color: $success;
+}
+
+.alert-secondary {
+  background-color: $secondary;
+  border-color: $secondary;
+  color: $body-color;
+}
+
+.h{
+    padding-top: 2rem;
+}

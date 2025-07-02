@@ -1,7 +1,7 @@
-// 1. Sobrescribir variables de Bootstrap
+// ✅ Primero tus overrides
 @import 'styles/bootstrap-override';
 
-// 2. Importar Bootstrap después de las variables sobreescritas
+// ✅ Luego Bootstrap (usa las variables ya redefinidas)
 @import 'bootstrap/scss/bootstrap';
 
 // 3. Tus variables personalizadas y estilos propios

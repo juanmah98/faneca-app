@@ -1,1 +1,25 @@
-<p>login works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="max-w-md mx-auto p-4 space-y-4">
+  <h2 class="text-2xl font-bold">Iniciar Sesión</h2>
+
+  <label class="block">
+    Email
+    <input formControlName="email" type="email" class="form-control w-full" />
+  </label>
+
+  <label class="block">
+    Contraseña
+    <input formControlName="password" type="password" class="form-control w-full" />
+  </label>
+
+  <button type="submit" class="btn btn-primary w-full" [disabled]="loading">
+    {{ loading ? 'Ingresando...' : 'Entrar' }}
+  </button>
+
+  <div class="text-center">
+    <button type="button" (click)="loginWithGoogle()" class="btn btn-outline-primary w-full">
+      Ingresar con Google
+    </button>
+  </div>
+
+  <div *ngIf="error" class="text-red-600 text-center">{{ error }}</div>
+</form>

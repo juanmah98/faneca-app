@@ -1,11 +1,11 @@
 // src/styles/_bootstrap-override.scss
 
 // Sobrescribimos los colores principales
-$primary: #2b5035;
-$success: #2b5035; // Usamos mismo verde para botones
-$secondary: #f3e9cf;
-$light: #fffaf0;
-$body-bg: #fdf9f0;
-$body-color: #2e392f;
+$primary: #2b5035 !default;
+$success: #2b5035 !default;
+$secondary: #f3e9cf !default;
+$light: #fffaf0 !default;
+$body-bg: #fdf9f0 !default;
+$body-color: #2e392f !default;
 
 // Puedes redefinir más si lo deseas

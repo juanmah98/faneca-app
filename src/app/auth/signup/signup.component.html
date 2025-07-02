@@ -1,1 +1,104 @@
-<p>signup works!</p>
+<div class="container py-5">
+  <div class="row">
+    <!-- Left: Formulario -->
+    <div class="col-md-6">
+      <h1 class="display-5 text-primary mb-3">Empieza a vender sin intermediarios,<br>sin comisiones y sin dramas</h1>
+      <p class="lead mb-4">
+        Regístrate y conecta con tus 3 primeros clientes gratis.<br>
+        Porque vender tus verduras debería ser más fácil que cultivarlas.
+      </p>
+
+      <button (click)="signUpWithGoogle()"
+              class="btn btn-light w-100 mb-3 d-flex align-items-center justify-content-center">
+        <img src="assets/logos/googleLogo.png" alt="Google" class="me-2" width="24" />
+        Regístrate con Google
+      </button>
+
+      <p class="text-success mb-2">O rellena tus datos manualmente:</p>
+
+      <form [formGroup]="form" (ngSubmit)="signUpWithEmail()">
+        <div class="mb-3">
+          <input formControlName="full_name" type="text" class="form-control" placeholder="Nombre completo">
+        </div>
+        <div class="mb-3">
+          <input formControlName="display_name" type="text" class="form-control"
+                 placeholder="Nombre que verán los clientes de Faneca">
+        </div>
+        <div class="mb-3">
+          <input formControlName="email" type="email" class="form-control" placeholder="Correo electrónico">
+        </div>
+        <div class="mb-3">
+          <input formControlName="password" type="password" class="form-control" placeholder="Contraseña">
+        </div>
+        <div class="mb-3">
+          <input formControlName="phone" type="tel" class="form-control" placeholder="Teléfono">
+        </div>
+        <div class="row">
+          <div class="col-6 mb-3">
+            <input formControlName="location" type="text" class="form-control" placeholder="Localidad">
+          </div>
+          <div class="col-6 mb-3">
+            <input formControlName="postal_code" type="text" class="form-control" placeholder="Código postal">
+          </div>
+        </div>
+
+        <div class="alert alert-secondary small">
+          Tranquilo no queremos la ubicación exacta de tus cultivos, solo una aproximación para que seas visible a tus clientes más cercanos.
+        </div>
+
+        <button type="submit"
+                class="btn btn-success w-100"
+                [disabled]="loading">
+          {{ loading ? 'Registrando…' : '¡Registrarme y empezar a vender!' }}
+        </button>
+
+        <div class="pt-2">
+            <p class="text-success small">Tu huerto, tus precios, tu canal directo con los clientes.</p>
+        </div>
+       
+
+        <div *ngIf="error" class="text-danger mt-2">{{ error }}</div>
+      </form>
+    </div>
+
+    <!-- Right: Beneficios -->
+    <div class="col-md-6 border-start ps-4 d-flex flex-column justify-content-center h">
+      <div class="mb-4 d-flex align-items-start">
+        <i class="bi bi-cart3 fs-2 text-success me-3"></i>
+        <div class="row">
+          <div class="col-2"><img src="assets/iconos/singup-1.png" alt="Google" class="me-2" width="36px" /></div>
+          <div class="col-10"> 
+          <h5 class="text-success fw-bold">Vende directamente</h5>
+          <p class="mb-0">Sin plataformas raras. Sin comisiones escondidas.</p>
+         </div>
+         
+        </div>
+      </div>
+      <div class="mb-4 d-flex align-items-start">
+        <i class="bi bi-chat-dots fs-2 text-success me-3"></i>
+        <div class="row">
+          <div class="col-2"><img src="assets/iconos/singup-2.png" alt="Google" class="me-2" width="36px" /></div>
+         
+         <div class="col-10"> 
+          <h5 class="text-success fw-bold">Contacto directo con el cliente</h5>
+          <p class="mb-0">Tú decides el precio, tú decides cómo.</p>
+         </div>
+        </div>
+      </div>
+      <div class="d-flex align-items-start">
+        <i class="bi bi-star fs-2 text-success me-3"></i>
+        <div>
+         
+        </div>
+         <div class="row">
+          <div class="col-2"><img src="assets/iconos/singup-3.png" alt="Google" class="me-2" width="36px" /></div>
+          
+         <div class="col-10"> 
+           <h5 class="text-success fw-bold">Reseñas reales</h5>
+          <p class="mb-0">Gana visibilidad con reseñas auténticas de tus clientes.</p>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

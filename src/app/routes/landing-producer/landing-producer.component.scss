@@ -1,0 +1,47 @@
+@use 'bootstrap-override' as *;
+
+:host {
+  display: block;
+  background-color: $body-bg;
+  color: $body-color;
+}
+
+// Titulares usan la tipografía serif y nuestro verde
+.text-primary {
+  color: $primary !important;
+  font-family: var(--font-family-base);
+}
+
+// Subtítulos y textos secundarios
+.text-secondary {
+  color: $secondary !important;
+}
+
+// Tarjetas de planes
+.card {
+  background-color: $secondary;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+// Iconos en encabezados de tarjeta
+.card-body i {
+  min-width: 2rem;
+}
+
+// Botones
+.btn-success {
+  background-color: $success;
+  border-color: $success;
+  font-family: var(--font-family-base);
+  font-weight: 500;
+}
+
+.lead {
+  color: $body-color;
+}
+
+small {
+  color: $body-color;
+}
